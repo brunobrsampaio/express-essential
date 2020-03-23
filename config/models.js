@@ -5,7 +5,8 @@ const path      = require('path');
 const Sequelize = require('sequelize');
 
 const root      = path.dirname(require.main.filename);
-const config    = require(`${root}/config/config.js`);
+const config    = require(`${root}/config/database.js`);
+
 const sequelize = new Sequelize(config.database, config.username, config.password, config);
 
 const files     = `${root}/app/models`;
