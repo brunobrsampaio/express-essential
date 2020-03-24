@@ -1,8 +1,11 @@
 const express   = require('express');
 const router    = express.Router();
 
-// const AuthController = require('@controllers/AuthController');
+router.get('/', (req, res) => {
 
-// router.post('/auth/register', AuthController.register);
+    res.render('index', {
+        title : 'dudhsu'
+    });
+});
 
 module.exports = router;
